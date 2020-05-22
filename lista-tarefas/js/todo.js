@@ -8,6 +8,7 @@ function adicionarTarefa(){
 
         let card = document.createElement('div')
         card.setAttribute('class', 'card border-0 m-2')
+        card.setAttribute('title', 'Clique no cartão para trocar sua cor')
         let cont = 0
         card.onclick = (event) => {
             const colors = ['#2C65F5','#CF000F','#45F5B5','#F6BF6A']
@@ -21,6 +22,7 @@ function adicionarTarefa(){
     
         let iconeExcluir = document.createElement('span')
         iconeExcluir.setAttribute('class', 'material-icons text-secondary excluir')
+        iconeExcluir.setAttribute('title', 'deletar')
         iconeExcluir.textContent = "delete"
         iconeExcluir.onclick = function(event){
             card.remove()
