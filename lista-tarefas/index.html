@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do 📝</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-info py-0">
+            <span class="navbar-brand">To Do List 📝</span>
+            <span class="text-light align-middle">Olá. Seja bem vindo!</span>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 class="text-center mt-2">Lista de tarefas</h1>
+        <hr class="m-2">
+        <div class="d-flex flex-wrap justify-content-center" id="tarefas">
+           
+        </div>
+    </main>
+
+    <footer class="d-flex justify-content-center bg-dark py-2">
+        <input type="text" id="textoTarefa" class="form-control w-50 mx-2" placeholder="Escreva uma tarefa">
+        <button class="btn btn-info mx-2" id="addTarefa">Adicionar</button>
+    </footer>
+    
+    <script src="./js/todo.js"></script>
+</body>
+</html>

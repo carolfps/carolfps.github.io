@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #E5E6DA;
+}
+
+main {
+    display: block;
+    flex: 1 0 auto;
+}
+
+.card{
+    width: 250px;
+    border-top: 8px solid #A7D676 !important;
+}
+
+.excluir:hover{
+    cursor: pointer;
+}
