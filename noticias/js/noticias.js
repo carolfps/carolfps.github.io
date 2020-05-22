@@ -1,7 +1,7 @@
 let containerDeNoticias = document.getElementById('listaDeNoticias')
 
 async function pegarNoticias(){ 
-    let noticias = await fetch('https://newsapi.org/v2/top-headlines?country=br&apiKey=3e3a478adba34777b3aeb7801068e15c')
+    let noticias = await fetch('https://newsapi.caffsy.com/api/ProxyNewsApi?code=Tb5vwO2hATlmSFK5puLfqDjUclBbDIqxToxJ2AJ0cZlfyhzUpeqMGA==&country=br')
     
     let listaDeNoticias = await noticias.json()
 

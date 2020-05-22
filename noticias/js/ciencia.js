@@ -2,7 +2,7 @@ let containerDeNoticias = document.getElementById('listaDeNoticias')
 
 async function pegarNoticiasCiencia(){
 
-    let noticias = await fetch('http://newsapi.org/v2/top-headlines?country=br&category=science&apiKey=3e3a478adba34777b3aeb7801068e15c')
+    let noticias = await fetch('https://newsapi.caffsy.com/api/ProxyNewsApi?code=Tb5vwO2hATlmSFK5puLfqDjUclBbDIqxToxJ2AJ0cZlfyhzUpeqMGA==&country=br&category=science')
     
     let listaDeNoticias = await noticias.json()
 
