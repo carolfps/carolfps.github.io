@@ -1,9 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #E5E6DA;
+    background-color: #FFF8ED;
 }
 
 main {
@@ -11,11 +15,33 @@ main {
     flex: 1 0 auto;
 }
 
+nav{
+    background-color: #F56445;
+}
+
 .card{
     width: 250px;
-    border-top: 8px solid #A7D676 !important;
+    border-top: 8px solid #F6BF6A !important;
+}
+
+.card-body{
+    cursor: default;
+}
+
+.excluir{
+    transition: 0.3s;
 }
 
 .excluir:hover{
     cursor: pointer;
+    font-weight: bold;
+    color: #F22613 !important;
+}
+
+footer{
+    background-color: #F6BF6A;
+}
+
+.btn-adicionar{
+    background-color: #FCECAB;
 }

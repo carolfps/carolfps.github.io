@@ -8,6 +8,13 @@ function adicionarTarefa(){
 
         let card = document.createElement('div')
         card.setAttribute('class', 'card border-0 m-2')
+        let cont = 0
+        card.onclick = (event) => {
+            const colors = ['#2C65F5','#CF000F','#45F5B5','#F6BF6A']
+            const pos = cont%(colors.length)
+            card.style = `border-top: 8px solid ${colors[pos]} !important`
+            cont++
+        }
     
         let cardBody = document.createElement('div')
         cardBody.setAttribute('class', 'card-body d-flex justify-content-between align-items-center')
@@ -18,7 +25,6 @@ function adicionarTarefa(){
         iconeExcluir.onclick = function(event){
             card.remove()
         }
-    
     
         card.appendChild(cardBody)
         cardBody.textContent = texto
