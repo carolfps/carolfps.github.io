@@ -6,7 +6,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #FFFFD6;
+    background-color: #FFFFEF;
 }
 
 main {
@@ -18,36 +18,43 @@ main {
     flex-direction: row;
     justify-content: space-around;
     margin-top: 30px;
+    min-height: 400px;
+    align-items: center;
 }
 .projetos{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-
 .projeto{
-    height: 160px;
-    width: 280px;
+    height: 220px;
+    width: 250px;
     border-radius: 5px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px;
 }
 .pj1{
-    background-color: #AEFCF3;
+    border: 1px solid rgb(174, 252, 243);
+    background-color: rgba(174, 252, 243, 0.7);
 }
 .pj2{
-    background-color: #FCC6AE;
+    border: 1px solid rgb(252, 198, 174);
+    background-color: rgba(252, 198, 174, 0.7);
 }
 .pj3{
-    background-color: #EEE1FC;
+    border: 1px solid rgb(238, 225, 252);
+    background-color: rgba(238, 225, 252, 0.7);
+}
+p{
+    color: #525252;
 }
 a{
-    color: #000;
+    color: #525252;
     transition: 0.4s ease-in-out;
 }
 a:hover{
-    color: #FFF;
+    color: #525252;
     text-decoration: none;
     font-weight: bold;
 }
