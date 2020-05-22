@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FCFCE1 !important;
+    display: flex;
+    justify-content: center;
+}
+
+#card-endereco{
+    background-color: #A0D9C2;
+}

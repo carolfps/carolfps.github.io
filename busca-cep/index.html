@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Busca Endereço 🏡</title>
+</head>
+
+<body>
+    <main>
+        <h2 class="font-weight-bold text-center my-4">Busca Endereço por CEP 🏡</h2>
+        <div class="d-flex justify-content-center mx-3 mb-3">
+            <div class="card mr-auto" id="card-endereco" >
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-white font-weight-bold" for="cep">CEP</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="procurar">
+                                        <span class="material-icons">search</span>
+                                    </div>
+                                </div>
+                                <input type="text" title="Insira um CEP para encontrar o endereço correspondente" class="form-control" id="cep" maxlength="8">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-white font-weight-bold" for="rua">Rua</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="material-icons">my_location</span>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="rua">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="text-white font-weight-bold" for="numero">Número</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="material-icons">format_list_numbered</span>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="numero">
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-white font-weight-bold" for="complemento">Complemento</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="material-icons">add</span>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="complemento">
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label class="text-white font-weight-bold" for="bairro">Bairro</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="material-icons">home</span>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="bairro">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label class="text-white font-weight-bold" for="uf">UF</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span class="material-icons">location_city</span>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="uf">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- O link do jquery tem que vir antes do link do nosso javaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/busca.js"></script>
+</body>
+
+</html>
