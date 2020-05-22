@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #FFFFD6;
+}
+
+main {
+    display: block;
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+.projetos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 400px;
+}
+
+.projeto{
+    height: 160px;
+    width: 280px;
+    border-radius: 5px;
+    padding: 20px;
+    /* background-color: #C3E8CC; */
+}
+.pj1{
+    background-color: #AEFCF3;
+}
+.pj2{
+    background-color: #FCC6AE;
+}
+.pj3{
+    background-color: #EEE1FC;
+}
