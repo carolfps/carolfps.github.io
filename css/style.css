@@ -6,7 +6,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #FFFFEF;
+    /* background-color: #FFFFEF; */
+    background-color: #FEFEFE;
+
 }
 
 main {
@@ -29,7 +31,7 @@ main {
 }
 .projeto{
     height: 220px;
-    width: 250px;
+    width: 420px;
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
@@ -42,10 +44,6 @@ main {
     border: 1px solid rgb(252, 198, 174);
     background-color: rgba(252, 198, 174, 0.7);
 }
-.pj3{
-    border: 1px solid rgb(238, 225, 252);
-    background-color: rgba(238, 225, 252, 0.7);
-}
 p{
     color: #525252;
 }
@@ -54,9 +52,9 @@ a{
     transition: 0.4s ease-in-out;
 }
 a:hover{
-    color: #525252;
+    color: #FFF;
     text-decoration: none;
-    font-weight: bold;
+    background-color: #525252;
 }
 
 footer{
