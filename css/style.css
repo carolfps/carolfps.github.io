@@ -6,7 +6,6 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    /* background-color: #FFFFEF; */
     background-color: #FEFEFE;
 
 }
@@ -32,31 +31,27 @@ main {
 .projeto{
     height: 220px;
     width: 420px;
-    border-radius: 5px;
     padding: 20px;
     margin: 20px;
 }
 .pj1{
-    border: 1px solid rgb(174, 252, 243);
-    background-color: rgba(174, 252, 243, 0.7);
+    background-color: #FFA34D;
 }
 .pj2{
-    border: 1px solid rgb(252, 198, 174);
-    background-color: rgba(252, 198, 174, 0.7);
+    background-color: #5985FF;
 }
-p{
-    color: #525252;
-}
-a{
-    color: #525252;
+.todos-projetos a{
+    color: #000;
     transition: 0.4s ease-in-out;
 }
-a:hover{
+.todos-projetos a:hover{
     color: #FFF;
     text-decoration: none;
-    background-color: #525252;
+    background-color: #000;
 }
-
+p{
+    color: #fff;
+}
 footer{
     border-top: 1px solid #e2e8f0;
 }
@@ -67,8 +62,9 @@ footer>div{
 }
 
 svg path{
+    fill: #000;
     transition: fill 0.2s ease-in-out;
 }
 svg:hover path {
-    fill: #db0a5b;
+    fill: #abb7b7;
 }
