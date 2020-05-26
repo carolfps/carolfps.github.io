@@ -58,3 +58,19 @@ a:hover{
     text-decoration: none;
     font-weight: bold;
 }
+
+footer{
+    border-top: 1px solid #e2e8f0;
+}
+
+footer>div{    
+    display: flex;
+    justify-content: flex-end;
+}
+
+svg path{
+    transition: fill 0.2s ease-in-out;
+}
+svg:hover path {
+    fill: #db0a5b;
+}
