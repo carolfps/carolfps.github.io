@@ -27,6 +27,13 @@ main {
 .card-text{
     font-size: 12px;
 }
+.card-noticia>a{
+    color:#000 !important;
+}
+.card-noticia>a:hover{
+    text-decoration: none !important;
+    color: #707070 !important;
+}
 footer p{
     font-size: 11px;
 }

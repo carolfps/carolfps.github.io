@@ -9,7 +9,7 @@ async function pegarNoticiasCiencia(){
     listaDeNoticias.articles.forEach(noticia => {
            
         let divCol = document.createElement('div')
-        divCol.setAttribute('class','col-3')
+        divCol.setAttribute('class','col-lg-3 card-noticia')
     
         let divCard = document.createElement('div')
         divCard.setAttribute('class','card')
@@ -30,18 +30,17 @@ async function pegarNoticiasCiencia(){
         cardText.textContent = noticia.description
     
         let link = document.createElement('a')
-        link.setAttribute('class', 'btn btn-dark')
         link.setAttribute('href', noticia.url)
-        link.textContent = 'Ver notícia'
     
         divCard.appendChild(imgCard)
         divCard.appendChild(divCardBody)
 
         divCardBody.appendChild(cardTitle)
         divCardBody.appendChild(cardText)
-        divCardBody.appendChild(link)
+
+        link.appendChild(divCard)
     
-        divCol.appendChild(divCard)
+        divCol.appendChild(link)
 
         containerDeNoticias.appendChild(divCol)
 
