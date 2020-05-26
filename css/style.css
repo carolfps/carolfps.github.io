@@ -14,9 +14,6 @@ main {
     display: block;
     flex: 1 0 auto;
 }
-h1 strong{
-    background-color: #F0ED78;
-}
 .todos-projetos{
     display: flex;
     flex-direction: row;
