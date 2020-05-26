@@ -14,6 +14,9 @@ main {
     display: block;
     flex: 1 0 auto;
 }
+h1 strong{
+    background-color: #F0ED78;
+}
 .todos-projetos{
     display: flex;
     flex-direction: row;
@@ -33,12 +36,14 @@ main {
     width: 420px;
     padding: 20px;
     margin: 20px;
+    border-radius: 3px;
 }
 .pj1{
-    background-color: #FFA34D;
+    background-color: rgba(240, 96, 101, 0.8);
 }
 .pj2{
-    background-color: #5985FF;
+    /* background-color: rgba(96, 240, 134, 0.8); */
+    background-color: #48B2F0;
 }
 .todos-projetos a{
     color: #000;
