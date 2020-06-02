@@ -12,13 +12,25 @@ async function pegarFotos(){
         
         let endFotoJson = await endFoto.json();
 
-        let srcFotoPeq = endFotoJson.sizes.size[1].source;
+        let srcFotoPeq = "";
+        for(let tamFoto in endFotoJson.sizes.size) {
+            
+            if(endFotoJson.sizes.size[tamFoto].label === 'Large Square'){
+                srcFotoPeq = endFotoJson.sizes.size[tamFoto].source;
+                break;
+            }
+        }
+
+        if (srcFotoPeq === "") {
+            srcFotoPeq = endFotoJson.sizes.size[1].source;
+        }
 
         let img = document.createElement('img');
         img.setAttribute('src', srcFotoPeq);
         img.setAttribute('class', 'col-sm-2 my-2')
 
         divFotos.appendChild(img);
+
         
     }
 
