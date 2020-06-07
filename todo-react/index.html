@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="App.css">
+    <title>Lista de tarefas 📝</title>
+</head>
+<body>
+    <div id="output"></div>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+        <!-- <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script> -->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <!-- Your custom script here -->
+        <script type="text/babel" src="Footer.jsx"></script>
+        <script type="text/babel" src="Navbar.jsx"></script>
+        <script type="text/babel" src="Card.jsx"></script>
+        <script type="text/babel" src="Todo.jsx"></script>
+        <script type="text/babel" src="App.jsx"></script>
+        <script type="text/babel">
+            ReactDOM.render(
+                React.createElement(App, { }, null),
+                document.getElementById('output')
+            );
+        </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+  }
+
+  .main-page {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #FFF8ED;
+  }
+  
+  .main-page>main {
+    display: block;
+    flex: 1 0 auto;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .card{
+    max-width: 18rem;
+  }
+  .MuiSvgIcon-root{
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    -moz-user-select: none;
+  }
+  .deletar{
+    cursor: pointer;
+  }
+  footer{
+    background-color: blanchedalmond;
+  }
+  .btn-adicionar{
+    
+    background-color: #00BCD4;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    cursor: pointer;
+  }
+  .btn-adicionar:hover {
+    background: #00bcd4;
+    color: white;
+  }
