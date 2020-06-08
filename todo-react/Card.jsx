@@ -1,6 +1,6 @@
 const Card = (props) => {
   return (
-    <div className="card m-3 w-25">
+    <div className="card shadow m-3 w-25">
       <div className="card-body">
           <h3 className="font-weight-bold">{props.todo.titulo}</h3>
           <div className="d-flex justify-content-between align-items-center py-2">
