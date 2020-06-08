@@ -19,6 +19,10 @@ function adicionarTarefa(){
     
         let cardBody = document.createElement('div')
         cardBody.setAttribute('class', 'card-body d-flex justify-content-between align-items-center')
+
+        let cardTexto = document.createElement('p')
+        cardTexto.setAttribute('class', 'my-0')
+        cardTexto.textContent = texto
     
         let iconeExcluir = document.createElement('span')
         iconeExcluir.setAttribute('class', 'material-icons text-secondary excluir')
@@ -29,7 +33,7 @@ function adicionarTarefa(){
         }
     
         card.appendChild(cardBody)
-        cardBody.textContent = texto
+        cardBody.appendChild(cardTexto)
         cardBody.appendChild(iconeExcluir)
     
         let container = document.querySelector('#tarefas')
