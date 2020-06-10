@@ -10,21 +10,31 @@ class Todo extends React.Component{
         
         let titulo = e.target["titulo"].value
         let descricao = e.target["descricao"].value
-        let id = this.generateKey(titulo)
+        let key = this.generateKey(titulo)
         var todos = this.state.todos
-        todos.push({titulo: titulo, descricao: descricao, id: id})
-
+        todos.push({titulo: titulo, descricao: descricao, key: key})
+        
         this.setState({todos: todos})
+
+        localStorage.setItem('@todo-app/todos', JSON.stringify(todos)) 
 
         e.target["titulo"].value=""
         e.target["descricao"].value=""
     }
-    handleClick(todo){
+    handleDelete(todo){
         let state = this.state
         let posicao = state.todos.indexOf(todo)
         state.todos.splice(posicao, 1)
 
         this.setState(state)
+
+        localStorage.setItem('@todo-app/todos', JSON.stringify(state.todos)) 
+    }
+    componentDidMount(){
+        const previousTodos = localStorage.getItem('@todo-app/todos');
+        if (previousTodos){
+            this.setState({ todos: JSON.parse(previousTodos) });
+        }
     }
     render() {
         return(
@@ -33,7 +43,7 @@ class Todo extends React.Component{
                 <main>
                     <div className="d-flex flex-wrap justify-content-center">
                         {this.state.todos.map((todo) => 
-                            <Card key={todo.id} todo={todo} handler={(e) => this.handleClick(todo)} />
+                            <Card key={todo.key} todo={todo} handler={(e) => this.handleDelete(todo)} />
                         )}
                     </div>
                 </main>
