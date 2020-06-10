@@ -33,7 +33,7 @@ class Todo extends React.Component{
                 <main>
                     <div className="d-flex flex-wrap justify-content-center">
                         {this.state.todos.map((todo) => 
-                            <Card todo={todo} handler={(e) => this.handleClick(todo)} />
+                            <Card key={todo.id} todo={todo} handler={(e) => this.handleClick(todo)} />
                         )}
                     </div>
                 </main>
