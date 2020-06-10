@@ -1,18 +1,18 @@
 class Todo extends React.Component{
     state = {
-        todos: [
-            // {titulo: "DH", descricao: "Estudar JavaScript"},
-            // {titulo: "Café da manhã", descricao: "Café, panqueca, laranja"},
-            // {titulo: "Mercado", descricao: "Fazer compras da semana"},
-        ]
+        todos: [ ]
+    }
+    generateKey(pre){
+        return `${ pre }_${ new Date().getTime() }`;
     }
     handleSubmit(e){
         e.preventDefault()
         
         let titulo = e.target["titulo"].value
         let descricao = e.target["descricao"].value
+        let id = this.generateKey(titulo)
         var todos = this.state.todos
-        todos.push({titulo: titulo, descricao: descricao})
+        todos.push({titulo: titulo, descricao: descricao, id: id})
 
         this.setState({todos: todos})
 
@@ -22,7 +22,7 @@ class Todo extends React.Component{
     handleClick(todo){
         let state = this.state
         let posicao = state.todos.indexOf(todo)
-        state.todos.splice(posicao, 1) //esse 1 significa que ira deletar 1 item
+        state.todos.splice(posicao, 1)
 
         this.setState(state)
     }
