@@ -22,12 +22,6 @@ main {
     min-height: 400px;
     align-items: center;
 }
-.projetos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 .projeto{
     height: 220px;
     width: 420px;
@@ -69,4 +63,19 @@ svg path{
 }
 svg:hover path {
     fill: #abb7b7;
+}
+
+@media (max-width: 920px){
+    .todos-projetos{
+        flex-direction: column;
+    }
+    .projeto{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 600px){
+    .projeto{
+        width: 90vw;
+    }
 }
