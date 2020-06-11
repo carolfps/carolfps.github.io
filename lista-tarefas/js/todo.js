@@ -1,50 +1,72 @@
 let addTarefa = document.querySelector('#addTarefa')
 let inputTextoTarefa = document.querySelector('#textoTarefa')
+const listaTodo = { todos:[] }
+
+function criarElementos(tarefa){
+    let card = document.createElement('div')
+    card.setAttribute('class', 'card border-0 m-2')
+
+    let cardBody = document.createElement('div')
+    cardBody.setAttribute('class', 'card-body d-flex justify-content-between align-items-center')
+
+    let cardTexto = document.createElement('p')
+    cardTexto.setAttribute('class', 'my-0')
+    cardTexto.textContent = tarefa
+
+    let iconeExcluir = document.createElement('span')
+    iconeExcluir.setAttribute('class', 'material-icons text-secondary excluir')
+    iconeExcluir.setAttribute('title', 'deletar')
+    iconeExcluir.textContent = "delete"
+    iconeExcluir.onclick = function(event){
+        posDelete = Array.from(card.parentNode.children).indexOf(card)
+        let valoresSalvos = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
+        valoresSalvos.todos.splice(posDelete,1)
+        window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(valoresSalvos))
+
+        card.remove()
+    }
+
+    card.appendChild(cardBody)
+    cardBody.appendChild(cardTexto)
+    cardBody.appendChild(iconeExcluir)
+
+    let container = document.querySelector('#tarefas')
+    container.appendChild(card)
+}
+
+function carregarLista(){
+
+    let listaSalva = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
+
+    if(listaSalva){
+
+        listaSalva.todos.map((tarefaSalva)=>{
+
+            criarElementos(tarefaSalva.texto)
+
+            listaTodo.todos.push({texto: tarefaSalva.texto})
+        })
+    }
+}
 
 function adicionarTarefa(){
     let texto = inputTextoTarefa.value
     
     if(texto.length >0){
 
-        let card = document.createElement('div')
-        card.setAttribute('class', 'card border-0 m-2')
-        card.setAttribute('title', 'Clique no cartão para trocar sua cor')
-        let cont = 0
-        card.onclick = (event) => {
-            const colors = ['#2C65F5','#CF000F','#45F5B5','#F6BF6A']
-            const pos = cont%(colors.length)
-            card.style = `border-top: 8px solid ${colors[pos]} !important`
-            cont++
-        }
-    
-        let cardBody = document.createElement('div')
-        cardBody.setAttribute('class', 'card-body d-flex justify-content-between align-items-center')
-
-        let cardTexto = document.createElement('p')
-        cardTexto.setAttribute('class', 'my-0')
-        cardTexto.textContent = texto
-    
-        let iconeExcluir = document.createElement('span')
-        iconeExcluir.setAttribute('class', 'material-icons text-secondary excluir')
-        iconeExcluir.setAttribute('title', 'deletar')
-        iconeExcluir.textContent = "delete"
-        iconeExcluir.onclick = function(event){
-            card.remove()
-        }
-    
-        card.appendChild(cardBody)
-        cardBody.appendChild(cardTexto)
-        cardBody.appendChild(iconeExcluir)
-    
-        let container = document.querySelector('#tarefas')
-        container.appendChild(card)
+        criarElementos(texto)
     
         inputTextoTarefa.value=""
+
+        listaTodo.todos.push({texto: texto})
+        window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(listaTodo))
+
     } else{
         alert("Você deve digitar uma tarefa primeiro")
     }
 }
 
+carregarLista()
 
 addTarefa.onclick = adicionarTarefa
 
