@@ -39,21 +39,59 @@ function criarElementos(tarefa){
         iconeOk.onclick = function(event){
 
             let tarefaEdit = cardInput.value
-            cardTexto = document.createElement('p')
-            cardTexto.setAttribute('class', 'my-0 mr-auto')
-            cardTexto.textContent = tarefaEdit
 
-            divParent.insertBefore(cardTexto, iconeOk)
-            cardInput.remove()
+            if(tarefaEdit.length > 0){
 
-            divParent.insertBefore(iconeEditar,btnDelete)
-            iconeOk.remove()
+                let cardTexto = document.createElement('p')
+                cardTexto.setAttribute('class', 'my-0 mr-auto')
+                cardTexto.textContent = tarefaEdit
+    
+                divParent.insertBefore(cardTexto, iconeOk)
+                cardInput.remove()
+    
+                divParent.insertBefore(iconeEditar,btnDelete)
+                iconeOk.remove()
+    
+                let posEdit = Array.from(card.parentNode.children).indexOf(card)
+                let valoresSalvos = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
+                valoresSalvos.todos[posEdit] = {texto: cardTexto.innerText}
+                window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(valoresSalvos))
 
-            let posEdit = Array.from(card.parentNode.children).indexOf(card)
-            let valoresSalvos = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
-            valoresSalvos.todos[posEdit] = {texto: cardTexto.innerText}
-            window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(valoresSalvos))
+            } else{
+                alert("O texto não pode ser vazio!")
+            }
 
+        }
+
+        cardInput.onkeyup = function(event){
+
+            if(event.key == 'Enter'){
+        
+                let tarefaEdit = cardInput.value
+
+                if(tarefaEdit.length > 0){
+
+                    cardTexto = document.createElement('p')
+                    cardTexto.setAttribute('class', 'my-0 mr-auto')
+                    cardTexto.textContent = tarefaEdit
+        
+                    divParent.insertBefore(cardTexto, iconeOk)
+                    cardInput.remove()
+        
+                    divParent.insertBefore(iconeEditar,btnDelete)
+                    iconeOk.remove()
+        
+                    let posEdit = Array.from(card.parentNode.children).indexOf(card)
+                    let valoresSalvos = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
+                    valoresSalvos.todos[posEdit] = {texto: cardTexto.innerText}
+                    window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(valoresSalvos))
+
+                } else{
+                    alert("O texto não pode ser vazio!")
+                }
+        
+            }
+        
         }
 
 
