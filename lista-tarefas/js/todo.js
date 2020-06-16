@@ -7,18 +7,64 @@ function criarElementos(tarefa){
     card.setAttribute('class', 'card border-0 m-2')
 
     let cardBody = document.createElement('div')
-    cardBody.setAttribute('class', 'card-body d-flex justify-content-between align-items-center')
+    cardBody.setAttribute('class', 'card-body d-flex align-items-center')
 
     let cardTexto = document.createElement('p')
-    cardTexto.setAttribute('class', 'my-0')
+    cardTexto.setAttribute('class', 'my-0 mr-auto')
     cardTexto.textContent = tarefa
+
+    let iconeEditar = document.createElement('span')
+    iconeEditar.setAttribute('class', 'material-icons text-secondary editar mr-1')
+    iconeEditar.setAttribute('title', 'editar')
+    iconeEditar.textContent = "edit"
+    iconeEditar.onclick = function(event){
+        
+        let btnEdit = event.srcElement
+        let btnDelete = btnEdit.nextSibling
+        let divParent = event.srcElement.parentNode
+        let pTarefa = cardTexto.textContent
+        cardTexto.remove()
+
+        let cardInput = document.createElement('textarea')
+        cardInput.innerText = pTarefa
+        divParent.insertBefore(cardInput, btnEdit)
+
+        iconeEditar.remove()
+        let iconeOk = document.createElement('span')
+        iconeOk.setAttribute('class', 'material-icons text-secondary editar mr-1')
+        iconeOk.setAttribute('title', 'confirmar')
+        iconeOk.textContent = "check_circle"
+        divParent.insertBefore(iconeOk, btnDelete)
+
+        iconeOk.onclick = function(event){
+
+            let tarefaEdit = cardInput.value
+            cardTexto = document.createElement('p')
+            cardTexto.setAttribute('class', 'my-0 mr-auto')
+            cardTexto.textContent = tarefaEdit
+
+            divParent.insertBefore(cardTexto, iconeOk)
+            cardInput.remove()
+
+            divParent.insertBefore(iconeEditar,btnDelete)
+            iconeOk.remove()
+
+            let posEdit = Array.from(card.parentNode.children).indexOf(card)
+            let valoresSalvos = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
+            valoresSalvos.todos[posEdit] = {texto: cardTexto.innerText}
+            window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(valoresSalvos))
+
+        }
+
+
+    }
 
     let iconeExcluir = document.createElement('span')
     iconeExcluir.setAttribute('class', 'material-icons text-secondary excluir')
     iconeExcluir.setAttribute('title', 'deletar')
     iconeExcluir.textContent = "delete"
     iconeExcluir.onclick = function(event){
-        posDelete = Array.from(card.parentNode.children).indexOf(card)
+        let posDelete = Array.from(card.parentNode.children).indexOf(card)
         let valoresSalvos = JSON.parse(window.localStorage.getItem('@lista-tarefas-app/listaTodo'))
         valoresSalvos.todos.splice(posDelete,1)
         window.localStorage.setItem('@lista-tarefas-app/listaTodo', JSON.stringify(valoresSalvos))
@@ -28,6 +74,7 @@ function criarElementos(tarefa){
 
     card.appendChild(cardBody)
     cardBody.appendChild(cardTexto)
+    cardBody.appendChild(iconeEditar)
     cardBody.appendChild(iconeExcluir)
 
     let container = document.querySelector('#tarefas')

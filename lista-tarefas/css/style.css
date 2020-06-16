@@ -28,14 +28,14 @@ nav{
     cursor: default;
 }
 
-.excluir{
+.excluir, .editar{
     transition: 0.3s;
 }
 
-.excluir:hover{
+.excluir:hover, .editar:hover{
     cursor: pointer;
     font-weight: bold;
-    color: #F22613 !important;
+    color: #df000f !important;
 }
 
 footer{
