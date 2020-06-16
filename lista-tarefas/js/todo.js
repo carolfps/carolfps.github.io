@@ -22,8 +22,9 @@ function criarElementos(tarefa){
         let btnEdit = event.srcElement
         let btnDelete = btnEdit.nextSibling
         let divParent = event.srcElement.parentNode
-        let pTarefa = cardTexto.textContent
-        cardTexto.remove()
+        let cardParag = divParent.firstChild
+        let pTarefa = cardParag.textContent
+        cardParag.remove()
 
         let cardInput = document.createElement('textarea')
         cardInput.innerText = pTarefa
