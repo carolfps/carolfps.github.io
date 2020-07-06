@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Meus projetos 💻</title>
 </head>
@@ -19,31 +22,143 @@
                 <h4 class="text-center">◽ <strong>Meus Projetos</strong> ◽</h4>
                 <div class="projeto pj1">
                     <p class="my-1">
-                        <a href="/calculadora/" target="_blank"><strong>Calculadora</strong></a> - JavaScript, CSS
+                        <a href="#calcmodal" data-toggle="modal"><strong>Calculadora</strong></a> - JavaScript, CSS
                     </p>
+                    <div class="modal fade" id="calcmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Calculadora</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div> Uma calculadora básica utilizando JavaScript com o fundo da tela variando de acordo com a hora do dia.</div><br>
+                                    <a href="/calculadora/" target="_blank" class="font-weight-bold">Acessar calculadora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="my-1">
-                        <a href="/lista-tarefas/" target="_blank"><strong>Lista de tarefas</strong></a> - JavaScript, Bootstrap
+                        <a href="#todomodal" data-toggle="modal"><strong>Lista de tarefas</strong></a> - JavaScript, Bootstrap
                     </p>
+                    <div class="modal fade" id="todomodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Lista de tarefas</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div> Lista de tarefas utilizando JavaScript. É possível editar e deletar tarefas. As tarefas são salvas no armazenamento local do navegador.</div><br>
+                                    <a href="/lista-tarefas/" target="_blank" class="font-weight-bold">Acessar a lista de tarefas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="my-1">
-                        <a href="/todo-react/" target="_blank"><strong>Lista de tarefas v.2</strong></a> - React, Bootstrap
+                        <a href="#todoreactmodal" data-toggle="modal"><strong>Lista de tarefas v.2</strong></a> - React, Bootstrap
                     </p>
+                    <div class="modal fade" id="todoreactmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Lista de tarefas v.2</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div> Lista de tarefas utilizando React. É possível deletar tarefas e as tarefas são salvas no armazenamento local do navegador.</div><br>
+                                    <a href="/todo-react/" target="_blank" class="font-weight-bold">Acessar a lista de tarefas v.2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="my-1">
-                        <a href="/bin2dec/" target="_blank"> <strong>Conversor Binário-Decimal</strong></a> - JavaScript, Bootstrap
+                        <a href="#bindecmodal" data-toggle="modal"> <strong>Conversor Binário-Decimal</strong></a> - JavaScript, Bootstrap
                     </p>
+                    <div class="modal fade" id="bindecmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Conversor Binário-Decimal</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div> Simples conversor binário-decimal desenvolvido em JavaScript. <br> Ao digitar o número em binário no campo correspondente, o número é automaticamente convertido para decimal.</div><br>
+                                    <a href="/bin2dec/" target="_blank" class="font-weight-bold">Acessar o Conversor Binário-Decimal</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="my-1">
-                        <a href="/busca-cep/" target="_blank"> <strong>Busca CEP</strong></a> - HTML, JavaScript, API, Bootstrap
+                        <a href="#buscacepmodal" data-toggle="modal"> <strong>Busca CEP</strong></a> - HTML, JavaScript, API, Bootstrap
                     </p>
+                    <div class="modal fade" id="buscacepmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Busca CEP</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div>Um projeto desenvolvido em JavaScript que busca o endereço de uma residência a partir do CEP utilizando a API do ViaCEP.</div><br>
+                                    <a href="/busca-cep/" target="_blank" class="font-weight-bold">Acessar o Busca CEP</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="my-1">
-                        <a href="/noticias/" target="_blank"> <strong>Página de notícias</strong></a> - JavaScript, API, Bootstrap
+                        <a href="#noticiasmodal" data-toggle="modal"> <strong>Portal de notícias</strong></a> - JavaScript, API, Bootstrap
                     </p>
+                    <div class="modal fade" id="noticiasmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Portal de notícias</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div>Um projeto desenvolvido em JavaScript que utiliza a API do NewsAPI para buscar as últimas notícias.</div><br>
+                                    <a href="/noticias/" target="_blank" class="font-weight-bold">Acessar o Portal de Notícias</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="projetos-equipe">
                 <h4 class="text-center">◽ <strong>Participação em Projetos</strong> ◽</h4>
                 <div class="projeto pj2">
                     <p class="my-1">
-                        <a href="http://mizanga.com.br/home" target="_blank"><strong>Mizanga</strong></a> - PHP, Laravel, MySQL 
+                        <a href="#mizangamodal" data-toggle="modal"><strong>Mizanga</strong></a> - PHP, Laravel, MySQL 
                     </p>
+                    <div class="modal fade" id="mizangamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="background-color: #f3f1ef;">
+                                <div class="modal-header border-0">
+                                    <h5 class="mb-0 font-weight-bold" style="color: #2173A3;">Mizanga</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body my-0">
+                                    <div> Sistema de Gestão de Congresso desenvolvido em Laravel com integração de banco de dados. <br> O projeto foi desenvolvido por uma equipe de 5 alunas e sua entrega fez parte da integralização do curso de Desenvolvimento Web Full Stack da Digital House.</div><br>
+                                    <a href="http://mizanga.com.br/home" target="_blank" class="font-weight-bold">Acessar o site do Mizanga</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
