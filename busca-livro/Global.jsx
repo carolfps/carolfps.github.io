@@ -33,7 +33,7 @@ class Global extends React.Component{
                             }}
                         />
                         <div className="input-group-append" onClick={() => this.search()}>
-                            <span className="material-icons input-group-text">search</span>
+                            <span className="material-icons input-group-text search-btn">search</span>
                         </div>
                     </div>
                 </div>
