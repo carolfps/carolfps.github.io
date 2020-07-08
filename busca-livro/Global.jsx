@@ -2,14 +2,18 @@ class Global extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            query: ''
+            query: '',
+            items: []
         }
     }
     search() {
         const base_url = 'https://www.googleapis.com/books/v1/volumes?q='
         fetch(`${base_url}${this.state.query}`, {method: 'GET'})
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(json => {
+            let {items} = json
+            this.setState({items})
+        })
     }
     render() {
         return(
@@ -33,6 +37,7 @@ class Global extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Gallery items={this.state.items} />
             </div>
         )
     }
