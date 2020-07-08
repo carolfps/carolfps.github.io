@@ -7,7 +7,7 @@ class Global extends React.Component{
         }
     }
     search() {
-        const base_url = 'https://www.googleapis.com/books/v1/volumes?q='
+        const base_url = 'https://www.googleapis.com/books/v1/volumes?maxResults=12&q='
         fetch(`${base_url}${this.state.query}`, {method: 'GET'})
         .then(response => response.json())
         .then(json => {
@@ -18,7 +18,7 @@ class Global extends React.Component{
     render() {
         return(
             <div className="global">
-                <h2>Busca Livro</h2>
+                <h2 className="py-3 font-weight-bold">Busca Livro 📚</h2>
                 <div className="form-group">                    
                     <div className="input-group">
                         <input 

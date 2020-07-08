@@ -1,6 +1,6 @@
 class Gallery extends React.Component{
     render(){
-        let alternate = 'https://img.icons8.com/ios/220/000000/no-camera.png'
+        let alternate = 'https://img.icons8.com/ultraviolet/220/000000/no-camera.png'
         return(
             <div>
                 {
