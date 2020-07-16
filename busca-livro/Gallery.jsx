@@ -19,7 +19,7 @@ class Gallery extends React.Component{
                                     className="book-img"
                                 />
                                 <div className="book-text">
-                                    {title}
+                                    <p>{title.length>30? title.substring(0,35).concat('...') : title}</p>
                                 </div>
                             </a>
                         )
