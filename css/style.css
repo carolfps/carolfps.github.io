@@ -6,50 +6,14 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #FEFEFE;
-
+    background-color: rgb(255,232,222);
 }
-
 main {
     display: block;
     flex: 1 0 auto;
 }
-.todos-projetos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 30px;
-    min-height: 400px;
-    align-items: center;
-}
-.projeto{
-    height: 240px;
-    width: 420px;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 3px;
-}
-.pj1{
-    background-color: rgba(240, 96, 101, 0.8);
-}
-.pj2{
-    /* background-color: rgba(96, 240, 134, 0.8); */
-    background-color: #48B2F0;
-}
-.todos-projetos a{
-    color: #000;
-    transition: 0.4s ease-in-out;
-}
-.todos-projetos a:hover{
-    color: #FFF;
-    text-decoration: none;
-    background-color: #000;
-}
-p{
-    color: #fff;
-}
 footer{
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid #969ca36e;
 }
 
 footer>div{    
@@ -63,19 +27,4 @@ svg path{
 }
 svg:hover path {
     fill: #abb7b7;
-}
-
-@media (max-width: 920px){
-    .todos-projetos{
-        flex-direction: column;
-    }
-    .projeto{
-        width: 70vw;
-    }
-}
-
-@media (max-width: 600px){
-    .projeto{
-        width: 90vw;
-    }
 }
