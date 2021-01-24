@@ -1,20 +1,27 @@
 {
   "files": {
     "main.css": "/tvshowapp/static/css/main.52727e42.chunk.css",
-    "main.js": "/tvshowapp/static/js/main.6bd7ba2f.chunk.js",
-    "main.js.map": "/tvshowapp/static/js/main.6bd7ba2f.chunk.js.map",
+    "main.js": "/tvshowapp/static/js/main.d42f2e01.chunk.js",
+    "main.js.map": "/tvshowapp/static/js/main.d42f2e01.chunk.js.map",
     "runtime-main.js": "/tvshowapp/static/js/runtime-main.b0719c70.js",
     "runtime-main.js.map": "/tvshowapp/static/js/runtime-main.b0719c70.js.map",
-    "static/js/2.2bf42706.chunk.js": "/tvshowapp/static/js/2.2bf42706.chunk.js",
-    "static/js/2.2bf42706.chunk.js.map": "/tvshowapp/static/js/2.2bf42706.chunk.js.map",
+    "static/js/2.d4c7bd79.chunk.js": "/tvshowapp/static/js/2.d4c7bd79.chunk.js",
+    "static/js/2.d4c7bd79.chunk.js.map": "/tvshowapp/static/js/2.d4c7bd79.chunk.js.map",
     "index.html": "/tvshowapp/index.html",
     "static/css/main.52727e42.chunk.css.map": "/tvshowapp/static/css/main.52727e42.chunk.css.map",
-    "static/js/2.2bf42706.chunk.js.LICENSE.txt": "/tvshowapp/static/js/2.2bf42706.chunk.js.LICENSE.txt"
+    "static/js/2.d4c7bd79.chunk.js.LICENSE.txt": "/tvshowapp/static/js/2.d4c7bd79.chunk.js.LICENSE.txt",
+    "static/media/add-gray-s.6edcfa0e.svg": "/tvshowapp/static/media/add-gray-s.6edcfa0e.svg",
+    "static/media/close-search-w.68b0bd52.svg": "/tvshowapp/static/media/close-search-w.68b0bd52.svg",
+    "static/media/logo-telecine.svg": "/tvshowapp/static/media/logo-telecine.8881d65e.svg",
+    "static/media/play-small-player-w.aba38ffc.svg": "/tvshowapp/static/media/play-small-player-w.aba38ffc.svg",
+    "static/media/rec-gray-s.07096c22.svg": "/tvshowapp/static/media/rec-gray-s.07096c22.svg",
+    "static/media/sad-gray-w.74d55914.svg": "/tvshowapp/static/media/sad-gray-w.74d55914.svg",
+    "static/media/share-gray-s.5a69a61c.svg": "/tvshowapp/static/media/share-gray-s.5a69a61c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b0719c70.js",
-    "static/js/2.2bf42706.chunk.js",
+    "static/js/2.d4c7bd79.chunk.js",
     "static/css/main.52727e42.chunk.css",
-    "static/js/main.6bd7ba2f.chunk.js"
+    "static/js/main.d42f2e01.chunk.js"
   ]
 }
